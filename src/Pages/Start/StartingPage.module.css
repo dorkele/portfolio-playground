@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: #2f0a28;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    margin: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.accessible {
+    composes: links;
+    background-color: #b8e1ff;
+    box-shadow: rgb(184, 225, 255) 0px 5px 15px;
+}
+
+.chaotic {
+    composes: links;
+    background-color: #ff715b;
+    box-shadow: rgb(255, 113, 91) 0px 5px 15px;
+}

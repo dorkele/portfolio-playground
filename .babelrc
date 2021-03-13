@@ -1,0 +1,5 @@
+// Babel presets are array of babel plugins where we don't need to
+// assemble our own set of plugins
+{
+    "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
