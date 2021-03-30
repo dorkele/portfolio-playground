@@ -7,30 +7,45 @@
     height: 100%;
     width: 100%;
     position: fixed;
-    background-color: #2f0a28;
+    background-color: rgba(255, 255, 255, 0.5);
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    background-image: url("/public/images/oko1.png");
+    background-size: 3%;
 }
 
 .links {
-    height: 100px;
-    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 600px;
     border-radius: 20px;
     margin: 20px;
     text-align: center;
     text-decoration: none;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-color: white;
+    color: black;
+    font-size: 100px;
+    font-style: italic;
 }
 
 .accessible {
     composes: links;
-    background-color: #b8e1ff;
-    box-shadow: rgb(184, 225, 255) 0px 5px 15px;
+    box-shadow: rgb(113, 103, 124) 0px 5px 15px;
+    background-color: #dee2ff;
+}
+
+.accessible:hover,
+.accessible:focus {
 }
 
 .chaotic {
     composes: links;
-    background-color: #ff715b;
-    box-shadow: rgb(255, 113, 91) 0px 5px 15px;
+    box-shadow: rgb(219, 180, 173) 0px 5px 15px;
 }

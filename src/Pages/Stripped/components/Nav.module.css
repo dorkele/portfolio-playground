@@ -1,0 +1,18 @@
+.nav {
+    height: 80%;
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    box-shadow: rgb(113, 103, 124) 0px 5px 15px;
+    border-radius: 10px;
+    position: fixed;
+}
+
+.nav div {
+    width: 90%;
+    margin-bottom: 20px;
+    text-align: center;
+}
