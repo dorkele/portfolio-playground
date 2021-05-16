@@ -1,21 +1,13 @@
 import React from "react";
 import styles from "./Nav.module.css";
-import { Link, useRouteMatch } from "react-router-dom";
+import { useParams, useRouteMatch } from "react-router-dom";
 
-const Nav = ({ data }) => {
+const Nav = () => {
+    let name = useParams();
     let match = useRouteMatch();
     console.log(match);
-    return (
-        <div className={styles.nav}>
-            {data.poemCollection.items.map((item) => {
-                return (
-                    <Link key={item.sys.id} to={`${match.url}/${item.sys.id}`}>
-                        {item.title}
-                    </Link>
-                );
-            })}
-        </div>
-    );
+    console.log(name);
+    return <div className={styles.nav}>Nav</div>;
 };
 
 export default Nav;

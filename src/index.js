@@ -23,9 +23,15 @@ function App() {
     return (
         <ApolloProvider client={client}>
             <HashRouter>
-                <Route exact path="/" component={StartingPage} />
-                <Route path="/stripped" component={StrippedHome} />
-                <Route path="/chaotic-view" component={ChaoticHome} />
+                <Route exact path="/">
+                    <StartingPage />
+                </Route>
+                <Route path="/stripped">
+                    <StrippedHome />
+                </Route>
+                <Route path="/chaotic-view">
+                    <ChaoticHome />
+                </Route>
             </HashRouter>
         </ApolloProvider>
     );

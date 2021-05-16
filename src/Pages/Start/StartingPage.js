@@ -6,10 +6,10 @@ function StartingPage() {
     return (
         <div className={styles.page}>
             <Link to="/stripped" className={styles.accessible}>
-                <p>Stripped Content</p>
+                <p>Stripped</p>
             </Link>
             <Link to="/chaotic-view" className={styles.chaotic}>
-                <p>Content with some drama</p>
+                <p>Drama</p>
             </Link>
         </div>
     );

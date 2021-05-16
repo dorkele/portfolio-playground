@@ -1,35 +1,22 @@
 import React from "react";
-import styles from "./StrippedHome.module.css";
-import { useQuery } from "@apollo/client";
-import query from "../../queries/FETCH_POEMS";
-import query2 from "../../queries/FETCH_POEM";
-import { Switch, Route } from "react-dom";
-
+import StrippedContent from "./components/StrippedContent";
+import Videos from "./components/Videos";
 import Nav from "./components/Nav";
+import styles from "./StrippedHome.module.css";
+import { Route, Switch, useRouteMatch, useParams } from "react-router-dom";
 
-function AccessibleHome({ children }) {
-    const { loading, error, data } = useQuery(query);
+const StrippedHome = () => {
+    let match = useRouteMatch();
+    let name = useParams();
+    console.log(match);
 
-    if (loading) {
-        return "Loading...";
-    }
-    if (error) {
-        return <div>Error</div>;
-    }
-    const onTitleClick = (id) => {
-        const { load, err, poem } = useQuery(query2, { variables: id });
-        console.log(id);
-    };
     return (
         <div className={styles.page}>
-            {/* {children} */}
-            <Switch>
-                <Route>
-                    <Nav data={data} />
-                </Route>
-            </Switch>
+            <Nav />
+            <Route path="/stripped/:category" component={StrippedContent} />
+            kljalsjöl
         </div>
     );
-}
+};
 
-export default AccessibleHome;
+export default StrippedHome;
